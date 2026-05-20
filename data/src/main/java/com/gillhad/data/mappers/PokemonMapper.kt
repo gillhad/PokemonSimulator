@@ -17,6 +17,10 @@ import com.gillhad.domain.models.PokemonType
 import com.gillhad.domain.models.PokemonTypeEntry
 import com.gillhad.domain.models.Sprites
 
+fun List<PokemonDTO>.toDomain(): List<Pokemon>{
+    return this.map { it.toDomain() }
+}
+
 fun PokemonDTO.toDomain(): Pokemon {
     return Pokemon(
         id = this.id,

@@ -30,7 +30,7 @@ data class CriesDTO(
 @Serializable
 data class SpritesDTO(
     @SerialName("back_default")
-    val backDefault: String?,
+    val backDefault: String,
     @SerialName("back_female")
     val backFemale: String?,
     @SerialName("back_shiny")
@@ -38,7 +38,7 @@ data class SpritesDTO(
     @SerialName("back_shiny_female")
     val backShinyFemale: String?,
     @SerialName("front_default")
-    val frontDefault: String?,
+    val frontDefault: String,
     @SerialName("front_default_female")
     val frontDefaultFemale: String?,
     @SerialName("front_shiny")
