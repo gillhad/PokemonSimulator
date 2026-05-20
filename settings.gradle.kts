@@ -24,3 +24,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Pokemon Simulator"
 include(":app")
+include(":data")
+include(":domain")
