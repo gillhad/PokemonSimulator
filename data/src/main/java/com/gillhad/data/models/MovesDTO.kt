@@ -4,6 +4,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class MoveDTO(
-    val name: String,
-    val url: String
+    val name: String?,
+    val url: String?
 )

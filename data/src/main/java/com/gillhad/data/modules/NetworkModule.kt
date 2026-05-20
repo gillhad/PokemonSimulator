@@ -1,5 +1,6 @@
 package com.gillhad.data.modules
 
+import com.gillhad.data.BuildConfig
 import com.gillhad.data.remote.PokemonApi
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import dagger.Module
@@ -29,7 +30,9 @@ object NetworkModule {
     @Singleton
     fun provideLoggingInterceptor(): HttpLoggingInterceptor{
         return HttpLoggingInterceptor().apply {
-            level = HttpLoggingInterceptor.Level.BODY
+            if(BuildConfig.DEBUG){
+                level = HttpLoggingInterceptor.Level.BODY
+            }
         }
     }
 
